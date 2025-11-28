@@ -7,4 +7,4 @@ jobs:
     steps:
     - usues: actions/checout@v3
     - name: checkout code
-      run: python plus
+      run: ./plus
