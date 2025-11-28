@@ -1,13 +1,41 @@
-#!/usr/bin/python3
+#!/home/yuna/anaconda3/bin/python3
 # SPDX-FileCopyrightText: 2025 Yuna Furuhata
 # SPDX-License-Identifier: BSD-3-Clause
 import sys
    
-ans = 0
-for line in sys.stdin:
-    try:
-        ans += int(line)
-    except:
-        ans += float(line)
-     
-print(ans)
+try:
+    num=float(input("今日の気温: ")) 
+    weather = input("今日の天気(晴れ/雨/曇り/雪) : ").strip()
+    if num >= 20:
+        advice = "薄めのジャケット"
+
+    elif 15 <= num < 20 :
+        advice = "薄手のセーターやカーディガン、秋冬コート"
+    elif 10<= num < 15:
+        advice = "厚手のセーターやスウェット"
+    elif 5 <=  num < 10:
+        advice = "ダウンやウールのコート、手袋、マフラー必須"
+    elif num <5:
+        advice = "厚めのダウンやコート、カイロやヒートテックもあるといい"
+    
+    weather = weather.lower()
+    add = ""
+
+    if weather in ["雨","あめ"]:
+        add = "傘と撥水加工のある上着がおすすめ"
+    elif weather in ["雪", "ゆき"]:
+        add = "ブーツや手袋があるといい"
+    elif weather in ["曇り","くもり"]:
+        add = "日差しがなく少し肌寒いかも"
+    elif weather in ["晴れ", "はれ"]:
+        add = "日中は日差しが厚くなるかも"
+    else:
+        add = "天気の入力がありません"
+
+
+    print("服装:",advice)
+    print("追加事項:",add)
+except ValueError:
+    print("有効の数字ではない")
+    
+
