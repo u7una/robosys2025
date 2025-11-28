@@ -1,0 +1,10 @@
+name: test for plus
+
+on: push
+jobs:
+  run-script:
+    run-on: ubuntu-latest
+    steps:
+    - usues: actions/checout@v3
+    - name: checkout code
+      run: python plus
