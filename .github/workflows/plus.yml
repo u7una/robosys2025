@@ -4,16 +4,16 @@ on:
   push:
     paths:
       - "plus"
-      - ".github/workflows/plus.yml"
+      
   pull_request:
 
 jobs:
   test:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     
     steps:
       - name: checkout code
-      - usues: actions/checout@v3
+      - uses: actions/checout@v3
   
       
 
