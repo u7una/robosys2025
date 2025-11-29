@@ -1,10 +1,38 @@
 name: test for plus
 
-on: push
+on:
+  push:
+    paths:
+      - "plus"
+      - ".github/workflows/plus.yml"
+  pull_request:
+
 jobs:
   run-script:
     run-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        python-version:["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
+
+
     steps:
-    - usues: actions/checout@v3
-    - name: checkout code
-      run: bash -xv ./plus
+      - name: checkout code
+      - usues: actions/checout@v3
+  
+      - name: set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: make plus executable
+        run: chmod +x plus
+
+      - name: run test
+        run: ./plus 15 晴れ
+
+      - name: check output 
+        run: |
+          OUTPUT=$(./plus 5 雨)
+          echo "$OUTPUT"
+          echo "$OUTPUT" | grep "マフラー"

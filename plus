@@ -4,8 +4,16 @@
 import sys
    
 try:
-    num=float(input("今日の気温: ")) 
-    weather = input("今日の天気(晴れ/雨/曇り/雪) : ").strip()
+    if len(sys.argv) > 1:
+        num=float(sys.argv[1])
+    else:
+        num = float(input("気温: "))
+
+    if len(sys.argv) > 2:
+        weather = sys.arvg[2]
+    else:
+        weather = input("天気(晴れ/雨/曇り/雪): ").strip()
+
     if num >= 20:
         advice = "薄めのジャケット"
 
@@ -28,9 +36,9 @@ try:
     elif weather in ["曇り","くもり"]:
         add = "日差しがなく少し肌寒いかも"
     elif weather in ["晴れ", "はれ"]:
-        add = "日中は日差しが厚くなるかも"
+        add = "日中は日差しが熱くなるかも"
     else:
-        add = "天気の入力がありません"
+        add = ""
 
 
     print("服装:",advice)
