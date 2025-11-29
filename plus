@@ -12,7 +12,7 @@ try:
     if len(sys.argv) > 2:
         weather = sys.argv[2]
     else:
-        weather = input("天気(晴れ/雨/曇り/雪): ").strip()
+        weather = input("天気(晴れ/雨/曇り/雪): ").strip().lower()
 
     if num >= 20:
         advice = "薄めのジャケット"
