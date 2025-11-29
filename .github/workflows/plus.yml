@@ -21,4 +21,4 @@ jobs:
         run: chmod +x plus
 
       - name: run test
-        run: bash -xv ./plus
+        run: bash -xv ./test.bash
