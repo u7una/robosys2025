@@ -7,7 +7,7 @@ ng () {
 }
 
 res=0
-
+chmod +x plus
 out=$(./plus 20 晴れ)
 echo "$out" | grep -q "薄めのジャケット" || ng "$LINENO" 
 echo "$out" | grep -q "日中は日差しが熱くなるかも" || ng "$LINENO"
