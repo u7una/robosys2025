@@ -1,4 +1,4 @@
-#!/home/yuna/anaconda3/bin/python3
+#!/home/yuna/anaconda3/bin/env python3
 # SPDX-FileCopyrightText: 2025 Yuna Furuhata
 # SPDX-License-Identifier: BSD-3-Clause
 import sys
@@ -10,7 +10,7 @@ try:
         num = float(input("気温: "))
 
     if len(sys.argv) > 2:
-        weather = sys.arvg[2]
+        weather = sys.argv[2]
     else:
         weather = input("天気(晴れ/雨/曇り/雪): ").strip()
 
