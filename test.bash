@@ -8,9 +8,9 @@ ng () {
 
 res=0
 
-out=$(seq 5 | ./plus)
-[ "${out}" = 15 ] || ng "$LINENO" 
+out=$(./plus 20 晴れ)
+echo "$out" | grep -q "薄めのジャケット" || ng "$LINENO" 
+echo "$out" | grep -q "日中は日差しが熱くなるかも" || ng "$LINENO"
 
-[ "${out}" = 0 ] && echo OK 
-
+[ "$res" = 0 ] && echo "OK"
 exit $res
