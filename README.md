@@ -23,7 +23,7 @@
 
 このリポジトリをクローンしてください
 
-$git clone https://github.com/u7una/rebosys2025.git
+$git clone https://github.com/u7una/robosys2025.git
 
 $cd robosys2025
 
