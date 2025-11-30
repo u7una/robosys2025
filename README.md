@@ -19,10 +19,19 @@
 ---
 ## 使い方
 
+## インストール
+
+このリポジトリをクローンしてください
+
+$git clone https://hithub.com/u7una/rebosys2025.git
+
+$cd robosys2025
 
 ### 実行方法
 
-$chmod +x plus  - 実行権限を付与
+最初に実行権限を付与してください
+
+$chmod +x plus 
 
 $./plus 
 
