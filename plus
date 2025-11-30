@@ -1,4 +1,4 @@
-#!/home/yuna/anaconda3/bin/python3
+#!/user/bin/env python3
 # SPDX-FileCopyrightText: 2025 Yuna Furuhata
 # SPDX-License-Identifier: BSD-3-Clause
 import sys
