@@ -21,7 +21,9 @@
 
 
 ### 実行方法
-$chmod +x plus - 実行権限を付与
+
+$chmod +x plus  - 実行権限を付与
+
 $./plus 
 
 ## 実行例
