@@ -24,15 +24,15 @@ try:
     elif 5 <=  num < 10:
         advice = "ダウンやウールのコート、手袋、マフラー必須"
     elif num <5:
-        advice = "厚めのダウンやコート、カイロやヒートテックもあるといい"
+        advice = "厚めのダウンやコート、中にヒートテックを着るといいかも"
     
     weather = weather.lower()
     add = ""
 
     if weather in ["雨","あめ"]:
-        add = "傘と撥水加工のある上着がおすすめ"
+        add = "傘や撥水加工のある上着がおすすめ"
     elif weather in ["雪", "ゆき"]:
-        add = "ブーツや手袋があるといい"
+        add = "ブーツや手袋、カイロがあるといい"
     elif weather in ["曇り","くもり"]:
         add = "日差しがなく少し肌寒いかも"
     elif weather in ["晴れ", "はれ"]:
