@@ -46,7 +46,8 @@ try:
 
 
     print("服装:",advice)
-    print("追加事項:",add)
+    if add:
+        print("追加事項:",add)
 except ValueError:
     print("エラー:数値を入力してください", file=sys.stderr)
     sys.exit(1)
