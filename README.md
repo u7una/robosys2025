@@ -1,5 +1,4 @@
 # 服装提案秋冬版
-![plus test](https://github.com/u7una/robosys2025/actions/workflows/plus.yml/badge.svg)
 ![test](https://github.com/u7una/robosys2025/actions/workflows/test.yml/badge.svg)
 ロボットシステム学課題1
 
@@ -8,7 +7,7 @@
 ---
 
 ## 機能概要
-この 'plus' コマンドは、
+この 'clothes_advice' コマンドは、
 
 + 気温に応じた基本の服装提案
 + 天気に応じた追加アドバイス
@@ -34,9 +33,17 @@
 
 このリポジトリをクローンしてください
 
+```bash
+
 $git clone https://github.com/u7una/robosys2025.git
 
 $cd robosys2025
+
+---
+
+### 実行方法
+
+```md
 
 ### 実行方法
 
@@ -46,19 +53,15 @@ $chmod +x clothes_advice
 
 $./clothes_advice
 
+```md
 ## 実行例
 
-### 入力例
-
- 気温:20
-
- 天気(晴れ/雨/曇り/雪) :晴れ
-
-### 出力例
-
- 服装:薄めのジャケット
-
- 追加事項:日中は日差しが熱くなるかも
+```bash
+$ ./clothes_advice
+気温:20
+天気(晴れ/雨/曇り/雪) :晴れ
+服装:薄めのジャケット
+追加事項:日中は日差しが熱くなるかも
 
 ---
 
