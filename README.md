@@ -42,9 +42,9 @@ $cd robosys2025
 
 最初に実行権限を付与してください
 
-$chmod +x plus 
+$chmod +x clothes_advice 
 
-$./plus 
+$./clothes_advice
 
 ## 実行例
 

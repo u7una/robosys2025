@@ -14,7 +14,11 @@ try:
     else:
         weather = input("天気(晴れ/雨/曇り/雪): ").strip().lower()
 
-    if num >= 20:
+    
+    if num >= 25:
+        advice = "夏日。半袖などの涼しい服装"
+
+    elif 20 <= num < 25:
         advice = "薄めのジャケット"
 
     elif 15 <= num < 20 :
