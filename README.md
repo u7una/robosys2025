@@ -39,13 +39,11 @@ $git clone https://github.com/u7una/robosys2025.git
 
 $cd robosys2025
 
----
+```
 
 ### 実行方法
 
-```md
-
-### 実行方法
+```bash
 
 最初に実行権限を付与してください
 
@@ -53,7 +51,7 @@ $chmod +x clothes_advice
 
 $./clothes_advice
 
-```md
+```
 ## 実行例
 
 ```bash
@@ -63,6 +61,7 @@ $ ./clothes_advice
 服装:薄めのジャケット
 追加事項:日中は日差しが熱くなるかも
 
+```
 ---
 
 ## 気温ごとの服装指数(仕様)
@@ -92,6 +91,6 @@ $ ./clothes_advice
 
 ---
 
-## ©著作権表示
+## 著作権表示
 
 © 2025 Yuna Furuhata
