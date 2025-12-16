@@ -9,8 +9,12 @@ ng () {
 res=0
 chmod +x clothes_advice
 out=$(./clothes_advice 20 晴れ)
+status=$?
+
+[ "$status" -eq 0 ] || ng "$LINENO"
 echo "$out" | grep -q "薄めのジャケット" || ng "$LINENO" 
 echo "$out" | grep -q "日中は日差しが熱くなるかも" || ng "$LINENO"
+
 
 [ "$res" = 0 ] && echo "OK"
 exit $res
