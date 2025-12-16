@@ -55,9 +55,7 @@ $./clothes_advice
 ## 実行例
 
 ```bash
-$ ./clothes_advice
-気温:20
-天気(晴れ/雨/曇り/雪) :晴れ
+$ ./clothes_advice 20 晴れ
 服装:薄めのジャケット
 追加事項:日中は日差しが熱くなるかも
 ```
