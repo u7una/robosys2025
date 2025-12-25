@@ -91,6 +91,4 @@ $ ./clothes_advice 20 晴れ
 
 ---
 
-## 著作権表示
-
 © 2025 Yuna Furuhata
