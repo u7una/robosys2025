@@ -28,16 +28,27 @@
 - Ubuntu 22.04.5 LTS
  
 ## 使い方
+気温と天気(任意)を標準入力から渡してください。
+### 実行例
 
-## インストール
+```bash
+$ echo 12 | ./clothes_advice
+服装:厚手のセーターやスウェット
+
+$ echo "8 晴れ" | ./clothes_advice
+服装:ダウン・ウールのコート＋手袋・マフラー
+
+```
+
+### インストール
 
 このリポジトリをクローンしてください
 
 ```bash
 
-$git clone https://github.com/u7una/robosys2025.git
+$ git clone https://github.com/u7una/robosys2025.git
 
-$cd robosys2025
+$ cd robosys2025
 
 ```
 
@@ -47,18 +58,12 @@ $cd robosys2025
 
 最初に実行権限を付与してください
 
-$chmod +x clothes_advice 
+$ chmod +x clothes_advice 
 
-$./clothes_advice
+$echo 12 | ./clothes_advice
 
 ```
-## 実行例
 
-```bash
-$ ./clothes_advice 20 晴れ
-服装:薄めのジャケット
-追加事項:日中は日差しが熱くなるかも
-```
 ## 仕様補足
 天気の入力が省略された場合は服装のみを表示し、追加事項は出力されません。
 
