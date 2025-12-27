@@ -4,14 +4,16 @@
 import sys
    
 try:
-    if len(sys.argv) >= 2:
-        num = float(sys.argv[1])
-    else:
-        num = float(sys.stdin.read().strip())
+    data = sys.stdin.read().strip()
+    if not data:    
+        raise ValueError
+    
+    items = data.split()
+    num = float(items[0])
 
     weather = None
-    if len(sys.argv) >= 3:
-        weather = sys.argv[2]  
+    if len(items) >= 2:
+        weather = items[1]
     
     if num >= 25:
         advice = "夏日。半袖などの涼しい服装"
@@ -29,22 +31,19 @@ try:
         advice = "厚めのダウンやコート、中にヒートテックなどの防寒必須"
     print("服装:", advice)
 
-    if weather is not None:
-        weather = weather.lower()
-        add = ""
-
+    if weather:
+        
         if weather in ["雨","あめ"]:
-             add = "傘と撥水加工のある上着がおすすめ"
+             print("傘と撥水加工のある上着がおすすめ")
         elif weather in ["雪", "ゆき"]:
-             add = "ブーツや手袋、カイロがあるといい"
+             print("ブーツや手袋、カイロがあるといい")
         elif weather in ["曇り","くもり"]:
-             add = "日差しがなく少し肌寒いかも"
+             print("日差しがなく少し肌寒いかも")
         elif weather in ["晴れ", "はれ"]:
-             add = "日中は日差しが熱くなるかも"
+             print("日中は日差しが熱くなるかも")
         
 
-        if add:
-            print("追加事項:",add)
+        
 except ValueError:
     print("エラー:数値を入力してください", file=sys.stderr)
     sys.exit(1)
