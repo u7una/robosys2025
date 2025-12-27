@@ -8,7 +8,7 @@ ng () {
 
 res=0
 chmod +x clothes_advice
-out=$(echo 20| ./clothes_advice)
+out=$(echo "20 晴れ" | ./clothes_advice)
 status=$?
 
 [ "$status" -eq 0 ] || ng "$LINENO"
