@@ -8,13 +8,15 @@ ng () {
 
 res=0
 chmod +x clothes_advice
-out=$(./clothes_advice 20 晴れ)
+out=$(echo 20| ./clothes_advice)
 status=$?
 
 [ "$status" -eq 0 ] || ng "$LINENO"
 echo "$out" | grep -q "薄めのジャケット" || ng "$LINENO" 
 echo "$out" | grep -q "日中は日差しが熱くなるかも" || ng "$LINENO"
 
+echo "abc" | ./clothes_advice > /dev/null 2>&1
+[ "$?" -ne 0 ] || ng "$LINENO"
 
 [ "$res" = 0 ] && echo "OK"
 exit $res
