@@ -60,7 +60,7 @@ $ cd robosys2025
 
 $ chmod +x clothes_advice 
 
-$echo 12 | ./clothes_advice
+$ echo 12 | ./clothes_advice
 
 ```
 
