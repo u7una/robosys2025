@@ -27,8 +27,9 @@ $ echo 12 | ./clothes_advice
 
 ```text
 気温と天気の場合
-$ echo 8 晴れ | ./clothes_advice
-服装:ダウン・ウールのコート＋手袋・マフラー
+$ echo 12 晴れ | ./clothes_advice
+服装: 厚手のセーターやスウェット
+日中は日差しが熱くなるかも
 ```
 ## 必要なソフトウェア
 
