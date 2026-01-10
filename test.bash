@@ -13,7 +13,7 @@ status=$?
 
 [ "$status" -eq 0 ] || ng "$LINENO"
 echo "$out" | grep -q "薄めのジャケット" || ng "$LINENO" 
-echo "$out" | grep -q "日中は日差しが熱くなるかも" || ng "$LINENO"
+echo "$out" | grep -q "日中は日差しが強くなるかも" || ng "$LINENO"
 
 echo "abc" | ./clothes_advice > /dev/null 2>&1
 [ "$?" -ne 0 ] || ng "$LINENO"
